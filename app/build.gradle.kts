@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -36,7 +37,14 @@ android {
 }
 
 dependencies {
-    
+    implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
+
+    implementation("com.github.bumptech.glide:glide:4.15.0") // Ganti versi dengan versi terbaru jika ada
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.0")
+    implementation("com.makeramen:roundedimageview:2.3.0")
+    implementation("com.google.android.material:material:1.2.1")
+    implementation("androidx.recyclerview:recyclerview:1.2.1")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

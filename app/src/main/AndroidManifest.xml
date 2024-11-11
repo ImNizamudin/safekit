@@ -14,6 +14,11 @@
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +26,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".SecondActivity"></activity>
         <activity android:name=".HobbiesActivity"></activity>
+        <activity android:name=".ImagesActivity"></activity>
+        <activity android:name=".PhotosActivity"></activity>
     </application>
 
 </manifest>
